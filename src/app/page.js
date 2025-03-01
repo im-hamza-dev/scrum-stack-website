@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MdSearch, MdAccountCircle } from 'react-icons/md';
 import { IoNotificationsOutline } from 'react-icons/io5';
 import Link from 'next/link';
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar/navbar";
 import Banner from "./components/banner";
 
 export default function Home() {
