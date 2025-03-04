@@ -13,6 +13,15 @@ export default {
         primary:'#FFAA17',
         secondary:'#222429'
       },
+      keyframes: {
+        bounceUpDown: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        "bounce-up-down": "bounceUpDown 2s infinite ease-in-out",
+      },
     },
   },
   plugins: [],
