@@ -1,2 +1,2 @@
-# scum-stack-website
+# scrum-stack-website
 Scrum-stack public website 
