@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const AboutCompany = () => {
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="bg-gray-50 py-16 px-6 ">
       <div className="container mx-auto max-w-6xl">
         {/* Heading Section */}
         <h5 className="text-primary uppercase text-xs font-bold tracking-wider mb-2 flex items-center">
