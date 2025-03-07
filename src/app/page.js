@@ -13,7 +13,8 @@ import Feedback from "./components/Feedback/Feedback";
 import StatsCounter from "./components/StatsCounter/StatsCounter";
 import TeamSection from "./components/TeamSection/TeamSection";
 import FAQContact from "./components/FAQContact/FAQContact";
-
+import "./globals.css";
+ 
 export default function Home() {
 
   return (
