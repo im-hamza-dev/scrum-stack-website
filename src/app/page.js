@@ -14,6 +14,7 @@ import StatsCounter from "./components/StatsCounter/StatsCounter";
 import TeamSection from "./components/TeamSection/TeamSection";
 import FAQContact from "./components/FAQContact/FAQContact";
 import "./globals.css";
+import ClientSlideshow from "./components/ClientSlideshow/ClientSlideshow";
  
 export default function Home() {
 
@@ -21,6 +22,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Banner />
+      <ClientSlideshow/>
       <About/>
       <Services/>
       <TechManagement/>

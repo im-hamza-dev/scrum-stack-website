@@ -5,10 +5,11 @@ import ImageGrid from "./ImageGrid";
 
 const About = () => {
   return (
-    <section className="bg-gray-100 py-16 bg-[url('/AboutBg.jpg')] bg-cover bg-right bg-no-repeat">
+    <section className="bg-gray-100 py-16 bg-cover bg-right bg-no-repeat relative"> 
+     
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-center items-center -mt-20">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-center items-center -mt-20">
           <Card
             icon="/icon1.png"
             heading="Perfect Business Solutions"
@@ -24,18 +25,18 @@ const About = () => {
             heading="Reliable Support"
             text="Our team is here to help you succeed at every step."
           />
-        </div>
+        </div> */}
       </div>
-
+      <div></div>
       {/* Content Section */}
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-x-8 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-x-8 px-4 sm:px-6 lg:px-8 z-10">
         {/* Left Section: Image Grid */}
         <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center">
           <ImageGrid />
         </div>
 
         {/* Right Section: About Company */}
-        <div className="w-full sm:w-3/4 md:w-1/2">
+        <div className="w-full sm:w-3/4 md:w-1/2 z-10">
           <AboutCompany />
         </div>
       </div>

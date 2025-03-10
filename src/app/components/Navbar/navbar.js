@@ -28,18 +28,18 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed z-20 ${scrollPosition > 0 ? 'h-14' : ''}  w-full bg-white flex flex-row shadow-md`}>
+        <nav className={`fixed z-20 ${scrollPosition > 0 ? 'h-14' : ''}  w-full bg-white flex flex-row shadow-md px-[100px]`}>
             {/* Logo Section */}
             <Logo
                 width={scrollPosition > 0 ? 150 : 200}
-                src={scrollPosition > 0 ? "/logo2.png" : "/logo.png"}
+                src={"/scrumstack.png"}
                 hidebar={scrollPosition > 0}
                 position={scrollPosition > 0 ? "ml-10 mb-10" : ""}
             />
 
 
             {/* Navigation and Button */}
-            <div className={`container mx-auto flex items-center  py-4 px-6 ${scrollPosition > 0 ? 'justify-end mr-14 ' : 'justify-between'}`}>
+            <div className={`container mx-auto flex items-center  py-2 px-6 ${scrollPosition > 0 ? 'justify-end mr-14 ' : 'justify-between'}`}>
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6">
                     <MenuItems />
