@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { MdSearch, MdAccountCircle } from 'react-icons/md';
-import { IoNotificationsOutline } from 'react-icons/io5';
 import Link from 'next/link';
 import Navbar from "./components/Navbar/navbar";
 import Banner from "./components/banner";
@@ -15,13 +13,16 @@ import Feedback from "./components/Feedback/Feedback";
 import StatsCounter from "./components/StatsCounter/StatsCounter";
 import TeamSection from "./components/TeamSection/TeamSection";
 import FAQContact from "./components/FAQContact/FAQContact";
-
+import "./globals.css";
+import ClientSlideshow from "./components/ClientSlideshow/ClientSlideshow";
+ 
 export default function Home() {
 
   return (
     <div>
       <Navbar />
       <Banner />
+      <ClientSlideshow/>
       <About/>
       <Services/>
       <TechManagement/>
