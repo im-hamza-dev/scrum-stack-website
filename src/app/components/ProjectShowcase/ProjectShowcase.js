@@ -1,20 +1,20 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
-
-const projects = [
-    { title: 'Web Development', category: 'DESIGN / IDEAS', img: '/web-dev.jpg' },
-    { title: 'Tech Solutions', category: 'DESIGN / IDEAS', img: '/tech-solutions.jpg' },
-    { title: 'Smart Visions', category: 'DESIGN / IDEAS', img: '/smart-visions.jpg' },
-    { title: 'Platform Integration', category: 'DESIGN / IDEAS', img: '/platform-integration.jpg' },
-    { title: 'Tech Solutions', category: 'DESIGN / IDEAS', img: '/tech-solutions.jpg' },
-];
+import { projects } from '../../lib/helper';
 
 const ProjectShowcase = () => {
+    const router = useRouter();
+
+    const handleNavigation = (index) => {
+        router.push(`/projectDetails/${index}`);
+    };
+
     return (
         <section className="px-6 md:px-20 py-16 bg-gray-50 text-secondary">
             {/* Heading Section */}
@@ -50,11 +50,11 @@ const ProjectShowcase = () => {
                 className="overflow-hidden"
             >
                 {projects.map((project, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-lg cursor-pointer">
-                            <Image src={project.img} alt={project.title} layout="fill" objectFit="cover" />
+                    <SwiperSlide key={index} onClick={() => handleNavigation(index)} className="cursor-pointer">
+                        <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-lg">
+                            <Image src={project.image} alt={project.name} layout="fill" objectFit="cover" />
                             <div className="absolute inset-0 bg-black bg-opacity-40 hover:bg-primary hover:bg-opacity-50 transition-all duration-500 flex flex-col justify-end p-5">
-                                <h3 className="text-white font-bold text-lg md:text-xl">{project.title}</h3>
+                                <h3 className="text-white font-bold text-lg md:text-xl">{project.name}</h3>
                                 <p className="text-primary text-sm font-semibold">{project.category}</p>
                             </div>
                         </div>

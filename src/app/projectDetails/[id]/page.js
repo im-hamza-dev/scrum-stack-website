@@ -1,10 +1,14 @@
 "use client"
 import React from 'react';
 import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/fa";
-import DetailPageBanner from '../components/DetailPageBanner/DetailPageBanner';
+import DetailPageBanner from '../../components/DetailPageBanner/DetailPageBanner';
 import Image from "next/image";
+import { projects } from '../../lib/helper';
+import { useParams } from 'next/navigation';
 
 const Page = () => {
+    const { id } = useParams();
+    const project = projects[Number(id)];
     return (
         <div>
             <DetailPageBanner bgImage={"/projectBg.jpg"} title={"Project Details"} pageLink={"/projectDetails"} />
@@ -23,19 +27,31 @@ const Page = () => {
                     <div className="lg:col-span-2 space-y-6">
                         <h2 className="text-3xl sm:text-4xl text-secondary font-bold">Here to Know About This Project</h2>
                         <p className="text-gray-500 text-lg leading-8">
-                            There are many variations of passages of psum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                            <br /><br />
-                            Beyond more stoic this along goodness hey this this wow manatee mongoose one as since a far flustered impressive manifest far crud opened inside owing punitively around forewent and after wasteful telling sprang coldly and spoke less clients.
+                            {project.overview}
                         </p>
 
                         <h3 className="text-3xl sm:text-4xl text-secondary font-bold">Project Challenges</h3>
                         <p className="text-gray-500 text-lg leading-8">
-                            Eque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros.
+                            {project.challenges.map((challenge, index) => (
+                                <span key={index}>
+                                    {challenge}
+                                    {index !== project.challenges.length - 1 && ", "}<br/>
+                                </span>
+                            ))}
                         </p>
 
-                        <h3 className="text-3xl sm:text-4xl text-secondary font-bold">Organic Food Supply</h3>
+                        <h3 className="text-3xl sm:text-4xl text-secondary font-bold">{project.name}</h3>
                         <p className="text-gray-500 text-lg leading-8">
-                            When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+                        {project.features.map((feature, index) => (
+                                <span key={index}>
+                                    {feature}
+                                    {index !== project.features.length - 1 && ", "}<br/>
+                                </span>
+                            ))}  </p>
+
+                        <h3 className="text-3xl sm:text-4xl text-secondary font-bold">Tech Stack</h3>
+                        <p className="text-gray-500 text-lg leading-8">
+                            {project.techStack}
                         </p>
                     </div>
 
@@ -44,7 +60,7 @@ const Page = () => {
                         <ul className="space-y-4">
                             <li><span className="text-gray-400">Date:</span> <br /> <span className="font-bold">10 January, 2023</span></li>
                             <li><span className="text-gray-400">Client:</span> <br /> <span className="font-bold">Kodesolution Ltd</span></li>
-                            <li><span className="text-gray-400">Website:</span> <br /> <a href="#" className="text-primary font-bold">www.domain.com</a></li>
+                            <li><span className="text-gray-400">Website:</span> <br /> <a href="#" className="text-primary font-bold">{project.liveDemo}</a></li>
                             <li><span className="text-gray-400">Location:</span> <br /> <span className="font-bold">New York, USA</span></li>
                             <li><span className="text-gray-400">Value:</span> <br /> <span className="font-bold">$12,367</span></li>
                         </ul>
@@ -69,11 +85,11 @@ const Page = () => {
                 {/* Navigation */}
                 <div className="flex justify-between flex-wrap items-center border-y mt-12 py-4">
                     <button className="flex items-center space-x-4 text-secondary hover:text-gray-800">
-                        <span className="text-2xl border border-black p-2 rounded-full hover:bg-primary hover:text-white hover:border-transparent">←</span> 
+                        <span className="text-2xl border border-black p-2 rounded-full hover:bg-primary hover:text-white hover:border-transparent">←</span>
                         <span className='text-gray-500'>Previous</span>
                     </button>
                     <button className="flex items-center space-x-4 text-secondary hover:text-gray-800">
-                        <span className='text-gray-500'>Next</span> 
+                        <span className='text-gray-500'>Next</span>
                         <span className="text-2xl border border-black p-2 rounded-full hover:bg-primary hover:text-white hover:border-transparent">→</span>
                     </button>
                 </div>
