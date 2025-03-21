@@ -26,12 +26,10 @@ export default function Home() {
       <About/>
       <Services/>
       <TechManagement/>
-      <HeroSection/>
+      {/* <HeroSection/> */}
       <ProjectShowcase/>
       <Feedback/>
       <StatsCounter/>
-      <TeamSection/>
-      <FAQContact/>
     </div>
   );
 }

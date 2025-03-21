@@ -10,7 +10,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary:'#5858D4',
+        primary:'#588AE8',
         secondary:'#222429'
       },
       keyframes: {

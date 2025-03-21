@@ -26,7 +26,9 @@ const HeroSection = () => {
                     
                     {/* Title */}
                     <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold">
-                        IT Solutions & Services <br /> at your Fingertips
+                    AI-Powered, Scalable, & Agile driven Software Solutions.
+
+
                     </h1>
 
                     {/* Button */}
