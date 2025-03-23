@@ -25,11 +25,11 @@ export default function Home() {
       <ClientSlideshow/>
       <About/>
       <Services/>
+      <StatsCounter/>
       <TechManagement/>
       {/* <HeroSection/> */}
       <ProjectShowcase/>
       <Feedback/>
-      <StatsCounter/>
     </div>
   );
 }
