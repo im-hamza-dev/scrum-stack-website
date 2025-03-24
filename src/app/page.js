@@ -21,14 +21,15 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Banner />
-      <ClientSlideshow/>
-      <About/>
-      <ServicesComponent/>
-      <TechManagement/>
-      {/* <HeroSection/> */}
-      <ProjectShowcase/>
-      <Feedback/>
+      <div id="banner"><Banner /></div>
+      <div id="clients"><ClientSlideshow /></div>
+      <div id="about"><About /></div>
+      <div id="services"><ServicesComponent /></div>
+      <div id="tech-management"><TechManagement /></div>
+       {/* <HeroSection/> */}
+      <div id="projects"><ProjectShowcase /></div>
+      <div id="reviews"><Feedback /></div>
+      <div id="contact"><FAQContact/></div>
     </div>
   );
 }
