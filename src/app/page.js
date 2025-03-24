@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Navbar from "./components/Navbar/navbar";
 import Banner from "./components/banner";
 import About from "./components/About/About";
-import Services from "./components/Services/Services";
+import ServicesComponent from "./components/Services/Services";
 import TechManagement from "./components/TechManagement/TechManagement";
 import HeroSection from "./components/HeroSection/HeroSection";
 import ProjectShowcase from "./components/ProjectShowcase/ProjectShowcase";
@@ -24,7 +24,7 @@ export default function Home() {
       <Banner />
       <ClientSlideshow/>
       <About/>
-      <Services/>
+      <ServicesComponent/>
       <TechManagement/>
       {/* <HeroSection/> */}
       <ProjectShowcase/>
