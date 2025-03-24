@@ -29,7 +29,6 @@ export default function Home() {
       {/* <HeroSection/> */}
       <ProjectShowcase/>
       <Feedback/>
-      <StatsCounter/>
     </div>
   );
 }
