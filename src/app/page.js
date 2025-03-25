@@ -16,6 +16,7 @@ import FAQContact from "./components/FAQContact/FAQContact";
 import "./globals.css";
 import ClientSlideshow from "./components/ClientSlideshow/ClientSlideshow";
 import StatsBanner from "./components/StatsBanner/StatsBanner";
+import SDLCProcess from "./components/SDLCProcess/SDLCProcess";
  
 export default function Home() {
 
@@ -30,6 +31,7 @@ export default function Home() {
       <div id="tech-management"><TechManagement /></div>
        {/* <HeroSection/> */}
       <div id="projects"><ProjectShowcase /></div>
+      <SDLCProcess />
       <div id="reviews"><Feedback /></div>
       <div id="contact"><FAQContact/></div>
     </div>
