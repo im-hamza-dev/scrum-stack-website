@@ -1,76 +1,127 @@
-import Image from "next/image";
-import { FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const TechManagement = () => {
+export default function TechManagement() {
   return (
-    <section className="flex flex-col md:flex-row items-stretch bg-[url('/techBg.jpg')] bg-cover bg-top bg-no-repeat bg-secondary text-white h-auto pb-10 md:h-screen">
-      {/* Left Content */}
-      <div className="md:w-1/2 flex flex-col justify-center p-6 md:p-12 space-y-4">
-        <p className="text-primary font-semibold uppercase border-l-4 border-primary pl-2">
-          How Can We Work With You
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-          The Best Source for <br /> IT Solutions
-        </h2>
-        <p className="text-gray-400">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu convenient scheduling, account fugiat nulla pariatur.
-        </p>
-        <div className="flex items-start space-x-3 mt-4">
-          <span className="text-primary text-3xl">$</span>
-          <div>
-            <p className="font-bold text-lg">We're doing the right thing.</p>
-            <p className="font-bold text-lg">The right way.</p>
-          </div>
-        </div>
-        <ul className="mt-4 space-y-2">
-          <li className="flex items-center text-gray-400">
-            <span className="text-primary text-xl mr-2">✔</span>
-            Lorem Ipsum is not simply random text
-          </li>
-          <li className="flex items-center text-gray-400">
-            <span className="text-primary text-xl mr-2">✔</span>
-            Making this the first true generator on the Internet
-          </li>
-          <li className="flex items-center text-gray-400">
-            <span className="text-primary text-xl mr-2">✔</span>
-            Various versions have evolved over the years
-          </li>
-        </ul>
-      </div>
+    <div className="py-10 px-6 text-center max-w-5xl mx-auto">
+      <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
+        How Can We Work With You
+      </h2>
 
-      {/* Right Content (Yellow Sidebar + Image) */}
-      <div className="relative md:w-1/2 flex flex-col md:flex-row h-full md:h-auto">
-        {/* Yellow Sidebar with Play Icon */}
-        <div className="bg-primary w-full md:w-40 flex flex-col items-center justify-center md:justify-around h-48 md:h-full py-6 md:py-0">
-          {/* Animated Video Button */}
-          <motion.div
-            className="border border-secondary bg-secondary text-white rounded-full p-4 shadow-lg"
-            initial={{ scale: 1.2 }}
-            animate={{ scale: [1.2, 1, 1.2] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <FaPlay className="text-2xl" />
-          </motion.div>
-          <p className="text-secondary text-sm font-bold text-center mt-4 p-2">
-            Professional IT technology services you can trust
+      <div className="mt-6 bg-gray-100 rounded-lg p-8 flex flex-col md:flex-row items-center justify-between">
+        {/* Left Section */}
+        <div className="md:w-1/2 text-left">
+          <h3 className="text-xl font-bold text-gray-800">Dedicated Teams</h3>
+          <p className="text-gray-600 mt-2">
+            You get a fully committed team that integrates into your
+            organization and culture.
           </p>
         </div>
 
-        {/* Image Section */}
-        <div className="relative flex-1 w-full h-64 md:h-full">
-          <Image
-            src="/techImg.jpg"
-            alt="Team Discussion"
-            layout="fill"
-            objectFit="cover"
-            className="w-full h-full"
-          />
-        </div>
+        {/* Right Section */}
+        <ProcessFlow />
       </div>
-    </section>
-  );
-};
+      <div className="mt-6 bg-gray-100 rounded-lg p-8 flex flex-col md:flex-row items-center justify-between">
+        {/* Left Section */}
+        <div className="md:w-1/2 text-left">
+          <h3 className="text-xl font-bold text-gray-800">
+            Software Development Outsourcing
+          </h3>
+          <p className="text-gray-600 mt-2">
+            We build your software from start to finish, letting you focus on
+            your core business.
+          </p>
+        </div>
 
-export default TechManagement;
+        {/* Right Section */}
+        <ProcessFlow />
+      </div>
+    </div>
+  );
+}
+
+function ProcessFlow() {
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-center py-5 pt-14">
+      {/* scrum stack Section */}
+      <motion.div
+        initial={{ opacity: 0, x: -30, y: -4 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center"
+      >
+        <div className="w-24 h-24 bg-primary flex items-center justify-center rounded-full  text-lg font-extrabold text-white leading-none">
+          scrum <br />
+          stack
+        </div>
+      </motion.div>
+
+      {/* Connecting Dots */}
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: "50px" }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="h-2 bg-gray-300 rounded-full mx-2"
+      ></motion.div>
+
+      {/* Your Project */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="relative flex flex-col items-center"
+      >
+        <div className="w-24 h-24 bg-gray-200 flex items-center justify-center rounded-full  text-3xl text-black font-extrabold">
+          {`< >`}
+        </div>
+        <p className="mt-2 font-semibold text-gray-700">Your Project</p>
+
+        {/* Team Members */}
+        <motion.div
+          className="absolute -top-8 left-1/4 w-10 h-10 bg-white rounded-full border-primary flex items-center justify-center"
+          initial={{ opacity: 0, y: -10, x: 0 }}
+          animate={{ opacity: 1, y: -30, x: -60 }}
+          transition={{ duration: 0.4, delay: 0.8 }}
+        >
+          👩🏻‍💻
+        </motion.div>
+        <motion.div
+          className="absolute -top-8 right-1/4 w-10 h-10 bg-white rounded-full border  flex items-center justify-center"
+          initial={{ opacity: 0, y: -10, x: 0 }}
+          animate={{ opacity: 1, y: -40, x: -5 }}
+          transition={{ duration: 0.4, delay: 1 }}
+        >
+          🧑🏽‍💻
+        </motion.div>
+        <motion.div
+          className="absolute -top-8 right-1/4 w-10 h-10 bg-white rounded-full border  flex items-center justify-center"
+          initial={{ opacity: 0, y: -10, x: 0 }}
+          animate={{ opacity: 1, y: -30, x: 60 }}
+          transition={{ duration: 0.4, delay: 1.2 }}
+        >
+          👩🏾‍💻
+        </motion.div>
+      </motion.div>
+
+      {/* Connecting Dots */}
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: "50px" }}
+        transition={{ duration: 0.6, delay: 1.5 }}
+        className="h-2 bg-gray-300 rounded-full mx-2"
+      ></motion.div>
+
+      {/* You Section */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 1.8 }}
+        className="flex flex-col items-center"
+      >
+        <div className="w-20 h-20 bg-[#bbbbbb] flex items-center justify-center rounded-full  text-2xl">
+          👥
+        </div>
+        <p className="mt-2 font-semibold text-gray-700">You</p>
+      </motion.div>
+    </div>
+  );
+}

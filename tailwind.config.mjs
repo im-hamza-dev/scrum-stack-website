@@ -10,8 +10,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary:'#588AE8',
-        secondary:'#222429'
+        primary: "#0969c3",
+        secondary: "#223554", //'#222429'
       },
       keyframes: {
         bounceUpDown: {

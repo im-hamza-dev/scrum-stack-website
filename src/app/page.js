@@ -15,6 +15,7 @@ import TeamSection from "./components/TeamSection/TeamSection";
 import FAQContact from "./components/FAQContact/FAQContact";
 import "./globals.css";
 import ClientSlideshow from "./components/ClientSlideshow/ClientSlideshow";
+import StatsBanner from "./components/StatsBanner/StatsBanner";
  
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
       <div id="banner"><Banner /></div>
       <div id="clients"><ClientSlideshow /></div>
       <div id="about"><About /></div>
+      <div id="stats"><StatsBanner /></div>
       <div id="services"><ServicesComponent /></div>
       <div id="tech-management"><TechManagement /></div>
        {/* <HeroSection/> */}
