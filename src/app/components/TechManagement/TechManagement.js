@@ -51,14 +51,23 @@ function ProcessFlow() {
   const [showExpert, setshowExpert] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStartAnimation(false); // Reset animation
-      setTimeout(() => setStartAnimation(true), 500); // Restart animation after a short delay
-    }, 18000); // Total duration of animation
-  
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
-  
+    let timeout;
+
+    const restartAnimation = () => {
+      setStartAnimation(false); // Stop animation
+      setTimeout(() => {
+        setStartAnimation(true); // Restart animation
+      }, 500); // Short delay before restarting
+    };
+
+    if (startAnimation) {
+      timeout = setTimeout(restartAnimation, 18000); // Restart after 18s
+    }
+
+    return () => clearTimeout(timeout); // Cleanup on unmount
+  }, [startAnimation]);
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setshow(false);
@@ -107,7 +116,7 @@ function ProcessFlow() {
       {/* Connecting Line to Project */}
       <motion.div
         initial={{ width: 0 }}
-        animate={{ width: "70px" }}
+        animate={{ width: "50px" }}
         transition={{ duration: 0.6, delay: 6.5 }}
         className="h-2 border-dotted border-gray-500 border-b-2 mx-2"
       ></motion.div>
@@ -175,7 +184,7 @@ function ProcessFlow() {
         <motion.div
           key={i}
           initial={{ opacity: 0, x: showExpert ? 100 : -50 }}
-          animate={{ opacity: 1, x: showExpert ? -80 : 60 }}
+          animate={{ opacity: 1, x: showExpert ? -80 : 47 }}
           exit={{ opacity: 0 }} // Hides after animation completes
           transition={{ duration: 0.5, delay: i + 2 }}
           className=" md:w-4 md:h-4 lg:w-4 lg:h-4 sm:w-4 sm:h-4 w-2 h-2 bg-black rounded-full mx-1"
