@@ -6,7 +6,6 @@ const SDLCProcess = () => {
   const toggleDetails = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
   const updates = [
     {
       processName: "Planning",
@@ -14,9 +13,9 @@ const SDLCProcess = () => {
       color: "bg-green-500",
       time: "10h ago",
       details: [
-        "Define Objectives: Clearly outline project goals, scope, and success criteria.",
-        "Assess Feasibility: Evaluate resources, budget, and potential risks.",
-        "Develop a Roadmap: Create a structured timeline with key milestones and deliverables."
+        "Understanding Client Vision: We collaborate with clients to define their goals, business needs, and target audience.",
+        "Feasibility Assessment: We analyze project requirements, budget, and technology stack to ensure a viable solution.",
+        "Strategic Roadmap: We create a structured development plan with clear milestones, timelines, and risk mitigation strategies."
       ]
     },
     {
@@ -25,10 +24,10 @@ const SDLCProcess = () => {
       color: "bg-green-500",
       time: "9h ago",
       details: [
-        "Identify Needs: Collect detailed requirements from stakeholders, users, and clients.",
-        "Analyze Feasibility: Assess technical, operational, and business feasibility of requirements.",
-        "Document Specifications: Create a structured document outlining functional and non-functional requirements.",
-        "Validate Requirements: Review and confirm requirements with stakeholders to ensure alignment with project goals."
+        "Client Consultation: We engage in deep discussions to gather precise business and technical requirements.",
+        "User-Centric Approach: We focus on end-user needs to ensure a seamless and intuitive experience.",
+        "Detailed Documentation: We prepare well-structured specifications covering features, integrations, and security considerations.",
+        "Validation & Refinement: We ensure all requirements align with business goals and technical feasibility."
       ]
     },
     {
@@ -37,10 +36,10 @@ const SDLCProcess = () => {
       color: "bg-blue-500",
       time: "8h ago",
       details: [
-        "Architectural Design: Define system structure, components, and interactions.",
-        "UI/UX Design: Create wireframes, prototypes, and user experience flows.",
-        "Database Design: Plan the schema, tables, and relationships for efficient data storage.",
-        "Technology Selection: Choose frameworks, tools, and programming languages for development."
+        "Innovative UI/UX Design: We create wireframes, prototypes, and high-fidelity designs for an engaging user experience.",
+        "Scalable Architecture: We design flexible and robust system architectures to support future growth and enhancements.",
+        "Optimized Database Design: We structure databases efficiently to ensure high performance and scalability.",
+        "Technology Stack Selection: We choose the best tools and frameworks to build a secure, high-quality product."
       ]
     },
     {
@@ -49,10 +48,10 @@ const SDLCProcess = () => {
       color: "bg-yellow-500",
       time: "7h ago",
       details: [
-        "Code Development: Write and integrate components based on the design specifications.",
-        "Version Control: Use Git or other tools to manage and track code changes.",
-        "Integration: Combine modules and ensure seamless interaction between system components.",
-        "Unit Testing: Perform initial tests to validate functionality and catch early bugs."
+        "Agile Development: We follow an iterative approach to ensure continuous feedback and improvements.",
+        "Code Quality Standards: Our developers write clean, maintainable, and well-documented code.",
+        "Version Control & CI/CD: We use Git and CI/CD pipelines to ensure smooth deployments and version management.",
+        "Seamless Integrations: We integrate APIs, third-party services, and essential functionalities for a complete solution."
       ]
     },
     {
@@ -61,10 +60,10 @@ const SDLCProcess = () => {
       color: "bg-red-500",
       time: "6h ago",
       details: [
-        "Functional Testing: Ensure all features work as expected.",
-        "Performance Testing: Test system speed, scalability, and stability.",
-        "Security Testing: Identify and fix vulnerabilities to protect user data.",
-        "Bug Fixing: Resolve any issues found during testing to improve reliability."
+        "Automated & Manual Testing: We run rigorous functional, performance, and security tests.",
+        "Bug Tracking & Fixing: Our QA team ensures a flawless experience by identifying and resolving issues.",
+        "User Acceptance Testing (UAT): We validate the system with client feedback to ensure it meets business needs.",
+        "Scalability & Load Testing: We test performance under high-traffic conditions for a seamless user experience."
       ]
     },
     {
@@ -73,10 +72,10 @@ const SDLCProcess = () => {
       color: "bg-purple-500",
       time: "5h ago",
       details: [
-        "Prepare for Release: Package and configure the application for production.",
-        "Deploy to Server: Upload and host the software on cloud or on-premises infrastructure.",
-        "Monitor Performance: Track system behavior and address any immediate issues.",
-        "User Training: Provide documentation and guidance for end-users."
+        "Production Readiness: We ensure the system is optimized, secure, and scalable before going live.",
+        "Seamless Deployment: We deploy applications on cloud platforms with minimal downtime.",
+        "Monitoring & Performance Checks: We track system performance, security, and stability post-launch.",
+        "User Training & Documentation: We provide guides and support to help clients manage their new system."
       ]
     },
     {
@@ -85,10 +84,10 @@ const SDLCProcess = () => {
       color: "bg-gray-500",
       time: "4h ago",
       details: [
-        "Bug Fixes: Address and resolve any post-deployment issues.",
-        "Performance Optimization: Continuously improve system speed and efficiency.",
-        "Feature Enhancements: Add new functionalities based on user feedback.",
-        "Security Updates: Regularly update the system to patch vulnerabilities."
+        "Proactive Monitoring: We continuously track application performance and fix issues before they impact users.",
+        "Regular Updates: We roll out security patches, feature upgrades, and optimizations as needed.",
+        "Scalability Enhancements: We help businesses scale their software as their needs evolve.",
+        "24/7 Support: Our team provides ongoing assistance to ensure smooth operations."
       ]
     }
   ];
